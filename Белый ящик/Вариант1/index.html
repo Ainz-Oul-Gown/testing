@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Code Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="leftContainer">
+        <h1>Тестирование методом белого ящика</h1>
+        <div class="nameiimg">
+            <img id="image-fon" src="images/fon.jpg" alt="fon" />
+            <div id="varandtext">
+                <div class="varik">
+                    <button type="button" id="btn" onclick="onClickSlider()">Открыть задание</button>
+                    <p>Номер варианта:</p>
+                    <select id="variant" class="variant">
+                        <option value=""></option>
+                        <option value="1">Вариант 1</option>
+                        <option value="2">Вариант 2</option>
+                        <option value="3">Вариант 3</option>
+                        <option value="4">Вариант 4</option>
+                        <option value="5">Вариант 5</option>
+                        <option value="6">Вариант 6</option>
+                        <option value="7">Вариант 7</option>
+                        <option value="8">Вариант 8</option>
+                        <option value="9">Вариант 9</option>
+                    </select>
+                </div>
+                <p>Напишите свой код здесь:</p>
+            </div>
+        </div>
+        
+        <iframe src="https://embed.coderpad.io/sandbox?question_id=%20247193&use_question_button" style="width:100%;height:74%; border-radius:3px;">
+        </iframe>
+    </div>
+    <div class="rightContainer">
+        <div class="exisize">
+            <div id="iii"> 
+                <p id="var1">
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main()
+    {
+        Console.OutputEncoding = Encoding.UTF8;
+        Console.WriteLine("Решение квадратного уравнения");
+        //ввод данных
+        Console.Write("a = ");
+        var a = double.Parse(Console.ReadLine());
+        Console.Write("b = ");
+        var b = double.Parse(Console.ReadLine());
+        Console.Write("c = ");
+        var c = double.Parse(Console.ReadLine());
+
+        double x1, x2;
+        //дискриминант
+        var discriminant = Math.Pow(b, 2) - 4 * a * c;
+        if (discriminant < 0)
+        {
+            Console.WriteLine("Квадратное уравнение не имеет корней");
+        }
+        else
+        {
+            if (discriminant == 0) //квадратное уравнение имеет два одинаковых корня
+            {
+                x1 = -b / (2 * a);
+                x2 = x1;
+            }
+            else //уравнение имеет два разных корня
+            {
+                x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+            }
+            //вывод корней уравнения
+            Console.WriteLine($"x1 = {x1}; x2 = {x2}");
+        }
+
+        Console.WriteLine("Для выхода нажмите любую клавишу...");
+        Console.ReadKey(true);
+    }
+}
+                    </p>
+            <p id="var2">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        PalindromeChecker palindromeChecker = new PalindromeChecker();
+
+        Console.WriteLine("Введите слово для проверки на палиндром: ");
+        string input = Console.ReadLine();
+
+        if (palindromeChecker.IsPalindrome(input))
+        {
+            Console.WriteLine($"{input} является палиндромом!");
+        }
+        else
+        {
+            Console.WriteLine($"{input} не является палиндромом.");
+        }
+    }
+}
+public class PalindromeChecker
+{
+    public bool IsPalindrome(string word)
+    {
+        word = word.ToLower(); // Приводим слово к одному регистру для удобства сравнения
+        int left = 0;
+        int right = word.Length - 1;
+
+        while (right > left)
+        {
+            if (word[left] != word[right])
+            {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+}
+            </p>
+            <p id="var3">
+using System;
+
+public class FactorialCalculator
+{
+    public int CalculateFactorial(int number)
+    {
+        if (number < 0)
+        {
+            throw new ArgumentException("Факториал определен только для неотрицательных чисел.");
+        }
+        if (number == 0)
+        {
+            return 1;
+        }
+        int factorial = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            factorial *= i;
+        }
+        return factorial;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        FactorialCalculator calculator = new FactorialCalculator();
+
+        Console.WriteLine("Введите число для вычисления факториала: ");
+        int input = Convert.ToInt32(Console.ReadLine());
+
+        try
+        {
+            int result = calculator.CalculateFactorial(input);
+            Console.WriteLine($"{input}! = {result}");
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine("Ошибка: " + ex.Message);
+        }
+    }
+}
+            </p>
+            <p id="var4">
+using System;
+using System.Text;
+
+class Program
+{
+    static string ReverseString(string input)
+    {
+        StringBuilder reversedString = new StringBuilder();
+        
+        for (int i = input.Length - 1; i >= 0; i--)
+        {
+            if (char.IsLetter(input[i]))
+            {
+                if (char.IsUpper(input[i]))
+                {
+                    reversedString.Append(char.ToLower(input[i]));
+                }
+                else
+                {
+                    reversedString.Append(char.ToUpper(input[i]));
+                }
+            }
+            else if (char.IsNumber(input[i]))
+            {
+                reversedString.Append(input[i]);
+            }
+        }
+
+        return reversedString.ToString();
+    }
+
+    static void Main()
+    {
+        Console.WriteLine("Введите текст для реверса регистра и самого текста и игнорированием знаков препинания: ");
+        string input = Console.ReadLine();
+        
+        string reversed = ReverseString(input);
+        
+        Console.WriteLine("Реверсированные строка с регистром и без знаков препинания: " + reversed);
+    }
+}
+            </p>
+            <p id="var5">
+using System;
+
+class TemperatureConverter
+{
+    public static double CelsiusToFahrenheit(double celsius)
+    {
+        return (celsius * 9/5) + 32;
+    }
+
+    public static double FahrenheitToCelsius(double fahrenheit)
+    {
+        return (fahrenheit - 32) * 5/9;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Выберите опцию:");
+        Console.WriteLine("1 - Конвертировать из Цельсия в Фаренгейт");
+        Console.WriteLine("2 - Конвертировать из Фаренгейта в Цельсия");
+        int choice = Convert.ToInt32(Console.ReadLine());
+
+        if (choice == 1)
+        {
+            Console.WriteLine("Введите температуру в градусах Цельсия: ");
+            double celsius = Convert.ToDouble(Console.ReadLine());
+            double result = TemperatureConverter.CelsiusToFahrenheit(celsius);
+            Console.WriteLine($"Температура в градусах Фаренгейта: {result}");
+        }
+        else if (choice == 2)
+        {
+            Console.WriteLine("Введите температуру в градусах Фаренгейта: ");
+            double fahrenheit = Convert.ToDouble(Console.ReadLine());
+            double result = TemperatureConverter.FahrenheitToCelsius(fahrenheit);
+            Console.WriteLine($"Температура в градусах Цельсия: {result}");
+        }
+        else
+        {
+            Console.WriteLine("Неверный выбор опции.");
+        }
+    }
+}
+
+            </p>
+            <p id="var6"> 
+using System;
+
+class DateCalculator
+{
+    public static void CalculateDateDifference(DateTime date1, DateTime date2)
+    {
+        TimeSpan difference = date1 - date2;
+
+        Console.WriteLine($"Разница между датами:");
+        Console.WriteLine($"Дней: {difference.Days}");
+        Console.WriteLine($"Часов: {difference.TotalHours}");
+        Console.WriteLine($"Минут: {difference.TotalMinutes}");
+        Console.WriteLine($"Секунд: {difference.TotalSeconds}");
+    }
+
+    public static DateTime AddTimeToDate(DateTime date, int hours, int minutes, int seconds)
+    {
+        return date.AddHours(hours).AddMinutes(minutes).AddSeconds(seconds);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите первую дату в формате ГГГГ-ММ-ДД: ");
+        DateTime date1 = DateTime.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Введите вторую дату в формате ГГГГ-ММ-ДД: ");
+        DateTime date2 = DateTime.Parse(Console.ReadLine());
+
+        DateCalculator.CalculateDateDifference(date1, date2);
+
+        Console.WriteLine("Введите количество часов для добавления к первой дате: ");
+        int hours = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите количество минут для добавления к первой дате: ");
+        int minutes = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите количество секунд для добавления к первой дате: ");
+        int seconds = Convert.ToInt32(Console.ReadLine());
+
+        DateTime updatedDate = DateCalculator.AddTimeToDate(date1, hours, minutes, seconds);
+        Console.WriteLine($"Измененная дата: {updatedDate}");
+    }
+}
+</p>
+            <p id="var7"> 
+using System;
+
+class Program
+{
+    static int FindGCD(int a, int b)
+    {
+        while (b != 0)
+        {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    static void Main()
+    {
+        Console.WriteLine("Введите первое число: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Введите второе число: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        int gcd = FindGCD(num1, num2);
+        Console.WriteLine($"Наибольший общий делитель чисел {num1} и {num2}: {gcd}");
+    }
+}
+</p>
+            <p id="var8"> 8</p>
+            <p id="var9"> 9</p>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

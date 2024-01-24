@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+     /* Цвет фона */
+    margin:auto;
+    width:100%;
+    height:100%;
+
+}
+
+html {
+    width:100%;
+    height:100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 230px; */
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    margin: 25px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+input, button {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding:10px;
+}
+
+    button:hover {
+        background-color: #45a049; /* Цвет кнопки при наведении */
+    }
+
+.RightEl {
+    display: none;
+    justify-content: center;
+    height: 94vh;
+    margin: 31px;
+    width: 50%;
+    align-items: center;
+    float: right;
+    opacity: 0;
+}
+
+.LeftEl {
+    display: flex;
+    height: inherit;
+    float: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align:center;
+}
+
+#txtL {
+    text-align: left;
+}
+
+
+#sliderContent {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+.rightContainer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    height: 85vh;
+    text-align: center;
+    overflow: auto;
+}
+
+
+.scrollingText {
+    width: 100%; /* Ширина текста равна ширине контейнера */
+    white-space: pre-wrap; /* Текст не переносится на новую строку */
+}
+
+h1 {
+    color: #333333;
+    margin: 10px;
+}
+
+#uptest {
+    color: #333333;
+    margin-top: 80px;
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.exisizeBlock {
+    
+
+}

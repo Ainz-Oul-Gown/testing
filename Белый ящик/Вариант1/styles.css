@@ -1,0 +1,194 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.nameiimg {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#varandtext {
+    margin-right: 26%;
+}
+
+#image-fon {
+    max-width: 330px;
+    margin-right: 5%;
+}
+
+.varik {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    margin-top: 20px;
+}
+#variant {
+    margin-left: 5px;
+    width: 100px;
+    height: 30px;
+    margin-top: 5px;
+}
+.container {
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leftContainer {
+    text-align: center;
+    width: 80%;
+    height: 95%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    float: none;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightContainer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 40%;
+    height: 90%;
+    text-align: center;
+    overflow: auto;
+    float: right;
+    display: none;
+    white-space: pre-wrap;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    color: #555;
+    min-width: 127px;
+}
+#iii {
+    text-align: left;
+    color: #555;
+    margin-top: -160px;
+}
+
+#var1{
+    display:none;
+}
+#var2{
+    display:none;
+}
+#var3 {
+    display: none;
+}
+#var4 {
+    display: none;
+}
+#var5 {
+    display: none;
+}
+#var6 {
+    display: none;
+}
+#var7 {
+    display: none;
+}
+#var8 {
+    display: none;
+}
+#var9 {
+    display: none;
+}
+
+
+textarea {
+    width: 100%;
+    height: 300px;
+    resize: vertical;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: none;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 6px;
+}
+
+#btn {
+    margin-right: 10px;
+    min-width: 162px;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+pre {
+    width: 96%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    overflow: auto;
+    white-space: pre-wrap;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    display: none;
+}
+
+/* Добавим стиль для кнопки с задержкой и анимацией при наведении */
+button {
+    transition: background-color 0.3s ease;
+
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    /* Добавим стили для активного состояния кнопки */
+    button:active {
+        background-color: #3e8948;
+    }
+
+/* Стили для улучшения читаемости и смотрятся приятно */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #a5a5a5;
+    }

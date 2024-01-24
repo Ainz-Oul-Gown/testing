@@ -1,0 +1,144 @@
+body {
+    background-image: url(img/Road.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+}
+
+.frame-container {
+    /* Задаем рамку для контейнера */
+    width:100%;
+    max-width: 700px;
+    height: 50%; /* Задаем высоту для контейнера */
+}
+
+iframe {
+    width: 100%; /* Заполняет всю ширину контейнера */
+    height: 100%; /* Заполняет всю высоту контейнера */
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1); /* Для удаления рамки внутри iframe */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: medium black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+#btn {
+    width: 180px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+btn:hover {
+    background-color: #45a049;
+}
+
+.LeftEl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.varik {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 110px;
+}
+
+.RightEl {
+    font-family: 'Arial', sans-serif;
+    display: none;
+    justify-content: center;
+    height: 92vh;
+    margin: 30px;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    float: right;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#sliderContent {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+.rightContainer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    padding: 40px;
+    max-width: 800px;
+    height: 75%;
+    text-align: center;
+    overflow: auto; /* Создаем плавающую полосу прокрутки, если содержимое больше размеров контейнера */
+}
+
+
+.scrollingText {
+    width: 100%; /* Ширина текста равна ширине контейнера */
+    white-space: pre-wrap; /* Текст не переносится на новую строку */
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 140px;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#var1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#var2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#var3 {
+    display: flex;
+    flex-direction: column;
+}
